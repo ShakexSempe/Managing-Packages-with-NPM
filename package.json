@@ -4,9 +4,15 @@
 	"name": "fcc-learn-npm-package-json",
 	"license": "MIT",
 	"version": "1.0.0",
-	"keywords": [ "freecodecamp", "heroku", "node.js", "npm" ],
+	"keywords": [
+		"freecodecamp",
+		"heroku",
+		"node.js",
+		"npm"
+	],
 	"dependencies": {
-		"express": "^4.14.0"
+		"express": "^4.14.0",
+		"moment": "2.14.0"
 	},
 	"main": "server.js",
 	"scripts": {
