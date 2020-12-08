@@ -3,11 +3,12 @@
  * the verification process may break
  * ***************************************************/
 
-'use strict';
+//'use strict';
 
 var bGround = require('fcc-express-bground');
 var myApp = require('./myApp');
 var express = require('express');
+const { render } = require('./myApp');
 var app = express();
 
 if (!process.env.DISABLE_XORIGIN) {
@@ -53,6 +54,10 @@ app.use(function(err, req, res, next) {
       .send(err.message || 'SERVER ERROR');
   }  
 }) */
+
+app.get('/', function(req, res){
+  res.send('Hello Express');
+});
 
 var port = process.env.PORT || 3000
 bGround.setupBackgroundApp(app, myApp, __dirname).listen(port, function () {
