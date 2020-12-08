@@ -3,6 +3,7 @@
 	"description": "A freeCodeCamp project as part of the APIs and Microservices Certification",
 	"name": "fcc-learn-npm-package-json",
 	"license": "MIT",
+	"version": "1.0.0",
 	"keywords": [ "freecodecamp", "heroku", "node.js", "npm" ],
 	"dependencies": {
 		"express": "^4.14.0"
