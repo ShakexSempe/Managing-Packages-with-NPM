@@ -56,7 +56,7 @@ app.use(function(err, req, res, next) {
 }) */
 
 app.get('/', function(req, res){
-  res.send('Hello Express');
+  res.sendFile(__dirname + "/views/index.html");
 });
 
 var port = process.env.PORT || 3000
