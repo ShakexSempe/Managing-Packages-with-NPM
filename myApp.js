@@ -16,8 +16,14 @@ app.use(express.static(__dirname + "/public"));
 app.use("/public", express.static(__dirname + "/public"));
 /*end of serve static assets*/
 
+/*Serve JSON on a Specific Route*/
 
-
+/*end of Serve JSON on a Specific Route*/
+app.get('/json', function(req,res){
+    res.json({
+        "message": "Hello json"
+    });
+});
 
 
 
