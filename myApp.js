@@ -26,12 +26,13 @@ app.use("/public", express.static(__dirname + "/public"));
 /*end of Serve JSON on a Specific Route*/
 
 /*Use the .env File*/
-app.get('/json' , function(req, res){
-    var jsonResponse = {"message": "hello json"}
+app.get("/json" , function(req, res){
+    var jsonResponse = { "message": "hello json" };
 
-    if (process.env.MESSAGE_STYLE === 'uppercase'){
+    if (process.env.MESSAGE_STYLE === "uppercase"){
         jsonResponse.message = jsonResponse.message.toUpperCase
     }
+    
     res.json(jsonResponse);
 });
 
