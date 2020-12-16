@@ -3,6 +3,12 @@ var app = express();
 require('dotenv').config();
 
 
+/*Implement a Root-Level Request Logger Middleware*/
+    app.use(function(req, res, next){
+        console.log(req.method + " " + req.path + " - " +req.ip)
+        next();
+    });
+/*end of Implement a Root-Level Request Logger Middleware*/
 
 console.log("Hello World")
 
@@ -33,11 +39,9 @@ app.get("/json" , function(req, res){
         jsonResponse.message = jsonResponse.message.toUpperCase()
     }
 
-    res.json(jsonResponse);
+    res.json(jsonResponse)
 });
-
 /*end of Use the .env File*/
-
 
 
 
