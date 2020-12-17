@@ -43,7 +43,17 @@ app.get("/json" , function(req, res){
 });
 /*end of Use the .env File*/
 
-
+/*Chain Middleware to Create a Time Server*/
+function currentTimeString (){
+    return new Date().toString();
+}
+app.get('/now', function(req, res, next){
+    req.time = currentTimeString();
+    next();
+}, function(req, res){
+    res.json({ time: req.time });
+})
+/*end of Chain Middleware to Create a Time Server*/
 
 
 
