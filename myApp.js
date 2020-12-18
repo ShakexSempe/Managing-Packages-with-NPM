@@ -55,6 +55,11 @@ app.get('/now', (req, res, next) => {
 })
 /*end of Chain Middleware to Create a Time Server*/
 
+/*Get Route Parameter Input from the Client*/
+    app.get('/:word/echo', function(req, res){
+        res.json({echo: req.params.word});
+    });
+/*end of Get Route Parameter Input from the Client*/ 
 
 
 
