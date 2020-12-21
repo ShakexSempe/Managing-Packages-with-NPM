@@ -70,7 +70,9 @@ app.get('/name', function(req, res){
 });
 /* end of Get Query Parameter Input from the Client */
 
+/*body-parser to Parse POST Requests*/
 
+/*end of body-parser to Parse POST Requests*/
 
 
 
