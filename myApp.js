@@ -12,11 +12,11 @@ var bodyParser = require('body-parser')
 /*end of Implement a Root-Level Request Logger Middleware*/
 
 /*Use body-parser to Parse POST Requests*/
-app.use(function(req, res, next){
-    bodyParser.urlencoded({extended: false});
-    console.log(bodyParser)
-    next()
-})
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
+
+// parse application/json
+app.use(bodyParser.json())  
 /*end of Use body-parser to Parse POST Requests*/
 
 console.log("Hello World")
