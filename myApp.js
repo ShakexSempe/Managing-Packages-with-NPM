@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 require('dotenv').config();
+var bodyParser = require('body-parser')
 
 
 /*Implement a Root-Level Request Logger Middleware*/
@@ -9,6 +10,14 @@ require('dotenv').config();
         next();
     });
 /*end of Implement a Root-Level Request Logger Middleware*/
+
+/*Use body-parser to Parse POST Requests*/
+app.use(function(req, res, next){
+    bodyParser.urlencoded({extended: false});
+    console.log(bodyParser)
+    next()
+})
+/*end of Use body-parser to Parse POST Requests*/
 
 console.log("Hello World")
 
