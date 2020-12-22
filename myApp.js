@@ -75,14 +75,14 @@ app.get('/now', (req, res, next) => {
 /* Get Query Parameter Input from the Client */
 app.get('/name', function(req, res){
     res.json({ name: req.query.first + " " + req.query.last});
-
 });
 /* end of Get Query Parameter Input from the Client */
 
-/*body-parser to Parse POST Requests*/
-
-/*end of body-parser to Parse POST Requests*/
-
+/*Get Data from POST Requests*/
+app.post('/name', function(req, res){
+    res.json({ name: req.body.first + " " + req.body.last});
+})
+/*end of Get Data from POST Requests*/
 
 
 
