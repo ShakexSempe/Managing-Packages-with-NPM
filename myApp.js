@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+var bGround = require('fcc-express-bground');
 require('dotenv').config();
 var bodyParser = require('body-parser')
 
@@ -18,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json())  
 /*end of Use body-parser to Parse POST Requests*/
-
+bGround.log("Node server is listening:")
 console.log("Hello World")
 
 /*serve an html file*/ 
